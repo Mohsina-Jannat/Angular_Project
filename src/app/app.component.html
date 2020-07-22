@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -17,4 +17,26 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+ -->
+ 
+ <!-- <app-hello></app-hello> -->
 
+
+ <!-- THe [] binds variable with attribute value -->
+ <!-- <input type="text" value = "{{myVariable}}\" [disabled] = myDisabledValue/>   -->
+ <!-- <input type="text" [value] = "text" (input) = "updateValue($event)"/> -->
+ <!-- <input type="text" [(ngModel)] = "text" />
+ {{text}} -->
+ <!-- <button (click)="callmyFunc()">Hey there!</button> -->
+<!-- <table>
+  <tr>
+    <td>S.no</td>
+    <td>name</td>
+    <td>isonline</td></tr>
+  <tr *ngFor="let record of data; let i = index; let firstRecord = first; let lastRecord = last; let evenrecord = even; let oddrecord = odd" [ngClass]="{odd: oddrecord, even: evenrecord, first:firstRecord, last:lastRecord}">
+    <td>{{i + 1}}</td>
+    <td>{{record.name}}</td>
+    <td>{{record.online}}</td>
+  </tr>
+</table> -->
+<router-outlet></router-outlet>

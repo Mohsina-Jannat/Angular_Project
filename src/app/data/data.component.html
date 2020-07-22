@@ -1,0 +1,18 @@
+<!-- <p>
+  data works!
+</p> -->
+
+
+<table>
+  <tr>
+    <td>S.no</td>
+    <td>name</td>
+    <td>isonline</td></tr>
+  <tr *ngFor="let record of data; let i = index; let firstRecord = first; let lastRecord = last; let evenrecord = even; let oddrecord = odd" [ngClass]="{odd: oddrecord, even: evenrecord, first:firstRecord, last:lastRecord}">
+    <td>{{i + 1}}</td>
+    <td>{{record.name}}</td>
+    <td>{{record.online}}</td>
+  </tr>
+</table>
+
+<a routerLink='/'> Go back! </a>
