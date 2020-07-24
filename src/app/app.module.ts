@@ -14,6 +14,8 @@ import { AdminComponent } from './admin/admin.component'
 import {AuthGuard} from './auth.guard'
 import { UserService} from './user.service'
 import { LogoutComponent } from './logout/logout.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
 
 
 // // custom decorator
@@ -64,7 +66,9 @@ import { LogoutComponent } from './logout/logout.component';
     DataComponent,
     LoginComponent,
     AdminComponent,
-    LogoutComponent
+    LogoutComponent,
+    DashboardComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -81,8 +85,16 @@ import { LogoutComponent } from './logout/logout.component';
         canActivate: [AuthGuard]
       },
       {
+        path: 'dashboard',
+        component: DashboardComponent
+      },
+      {
         path: 'logout',
         component: LogoutComponent
+      },
+      {
+        path : 'register',
+        component: RegisterComponent
       },
       {
         path: '',
