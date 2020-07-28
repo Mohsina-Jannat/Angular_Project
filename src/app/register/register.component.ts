@@ -32,7 +32,7 @@ export class RegisterComponent implements OnInit {
       this.auth.registerUser(username, password).subscribe(record =>{
         console.log(record)
         if(record.success) {
-          this.router.navigate(['dashboard'])
+          this.router.navigate(['login'])
         }
       })
     }

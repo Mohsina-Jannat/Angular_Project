@@ -21,12 +21,12 @@ export class LoginComponent implements OnInit {
     const password = target.querySelector('#password').value
     this.Auth.getUserDetails(username,password).subscribe(record => {
       if(record.success) {
-        this.router.navigate(['admin'])  //redirect the person to admin
+        this.router.navigate(['dashboard'])  //redirect the person to admin
         this.Auth.setLoggedIn(true)
       } else {
         window.alert(record.message)
-        this.router.navigate(['admin'])  //redirect the person to admin
-        this.Auth.setLoggedIn(false)
+        // this.router.navigate(['admin'])  //redirect the person to admin
+        // this.Auth.setLoggedIn(false)
       }
     })
     console.log(username, password)
